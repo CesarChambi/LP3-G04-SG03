@@ -14,8 +14,28 @@ public class Principal {
             fl = true;
     }while(vida < 3 && !fl );
     if (fl == true)
-        System.out.println("Adivinaste!!!!! ");
+        System.out.println("Adivinaste!!!!!, !GANASTE IN INCREIBLE PREMIO¡");
     else    
         System.out.println("ups, perdiste...");
+    
+    String Resultado = elegir(vida);
+    System.out.print("Tu regalo es: "+Resultado);
     }
+    
+
+    public static String elegir(int vida) {
+        String gift = "";
+        switch (vida) {
+            case 1:
+                gift = "Un pasaje al caribe";
+                break;
+            case 2:
+                gift = "Una visita al museo más cercano a tu casa";
+                break;
+            case 3:
+                gift = "Una entrada al cine";
+                break;
+        }
+        return gift;
+}
 }
